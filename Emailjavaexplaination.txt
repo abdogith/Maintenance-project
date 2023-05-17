@@ -1,0 +1,18 @@
+                                                                    Email.java
+
+
+1-we introduced a new method in the code called setSubjectWithPrefix. 
+
+2-It takes two parameters: prefix and subject: When you call the setSubjectWithPrefix method, you need to provide two values: a prefix and a subject. These values are passed to the method as input.
+
+3-it combines two strings together. In this case, we take the prefix and subject provided as input to the method, and we join them together 
+with a space in between.
+
+4-Once we have the combined value of the prefix and subject, we use this combined value as input for the original setSubject method that 
+already exists in the code. We're reusing the existing functionality by calling it from our new method.
+
+5-instead of calling the setSubject method directly, you can now use the setSubjectWithPrefix method if you want to add a prefix to the subject
+of an email. It provides a convenient way to modify the subject without modifying the existing code that directly calls the setSubject method.
+
+6-This modification is handy when you want to add a consistent prefix to all email subjects. Instead of manually adding the prefix every time 
+you call the setSubject method, you can use the setSubjectWithPrefix method, which automatically adds the prefix for you. The advantage is that you can achieve this without making changes to the existing code that already calls the setSubject method directly.
