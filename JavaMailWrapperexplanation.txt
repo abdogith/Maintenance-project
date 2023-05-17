@@ -1,0 +1,25 @@
+                                                               Java Mail Wrapper
+
+1- public class JavaMailWrapper extends Email {: This line declares a class called JavaMailWrapper which extends the Email class. In Java, the extends keyword is used to create a subclass that inherits properties and methods from the superclass (Email in this case).
+
+2- protected static Log sLog = LogFactory.getLog(Email.class);: This line declares a static variable sLog of type Log, which is a logger object from the Apache Commons Logging framework. The LogFactory.getLog(Email.class) statement initializes the logger with the name of the Email class. The logger is used for logging messages.
+
+3-@Override: This annotation indicates that the method that follows is intended to override a method in the superclass or implement an interface.
+ In this case, it is used to override the send() method inherited from the Email class.
+
+4-public void send() throws MessagingException, UnsupportedEncodingException {: This line defines the send() method, which is responsible for sending the email. It throws two exceptions: MessagingException and UnsupportedEncodingException, indicating that these exceptions can occur during the execution of the method.
+
+5-long t0 = System.currentTimeMillis();: This line records the current time in milliseconds and assigns it to the variable t0. It is used to measure the execution time of the email sending process.
+
+6-try { ... } finally { ... }: This construct is used for exception handling. The code within the try block contains the existing code to send
+the email, which is not shown in the provided snippet. The finally block ensures that the code inside it is always executed, regardless of 
+whether an exception occurs or not.
+
+7-sLog.info("Email sent successfully.");: This line logs an informational message using the logger sLog. It indicates that the email was sent successfully.
+
+8-long t = System.currentTimeMillis() - t0;: This line calculates the time elapsed for sending the email by subtracting the value of t0 
+(recorded at the start) from the current time.
+
+9-if (t > 30000) ... else if (t > 5000) ...: These conditional statements check the value of t (execution time) and determine the appropriate 
+log level to use for logging the execution time. If the execution time exceeds 30,000 milliseconds (30 seconds), a warning message is logged. 
+If it exceeds 5,000 milliseconds (5 seconds) but is less than or equal to 30,000 milliseconds, an informational message is logged.
